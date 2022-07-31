@@ -1,24 +1,25 @@
 export class Tbody{
-    constructor(date,description,type,amount){
+    constructor(date,description,type,amount,id){
         this.date=date;
         this.description=description;
         this.type=type;
         this.amount=amount;
-    
+        this.id=id;
        
     }
    render(){
     const tr=document.createElement('tr');
-    tr.innerHTML=` <td><input type="date" name="" id="" value="${this.date}" /></td>
-    <td><input type="text" name="" id="" value="${this.description}" /></td>
+    tr.id=this.id;
+    tr.innerHTML=` <td><input type="date" id="date" class="edit" value="${this.date}" /></td>
+    <td><input type="text" id="description" class="edit" value="${this.description}" /></td>
     <td>
-      <select name="" id="">
+      <select id="type" class="edit">
         <option value="${this.type}">Expense</option>
         <option value="${this.type}">Income</option>
       </select>
     </td>
-    <td><input type="number" name="" id="" value="${this.amount}" /></td>
-    <td><button>❌</button></td>`
+    <td><input type="number" id="amount" class="edit" value="${this.amount}" /></td>
+    <td><button class="delete">❌</button></td>`
     return tr;
 }
 }
