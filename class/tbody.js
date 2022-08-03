@@ -14,8 +14,8 @@ export class Tbody{
     <td><input type="text" id="description" class="edit" value="${this.description}" /></td>
     <td>
       <select id="type" class="edit">
-        <option value="${this.type}">Expense</option>
-        <option value="${this.type}">Income</option>
+        <option class="option" value="Expense">Expense</option>
+        <option class="option" value="Income">Income</option>
       </select>
     </td>
     <td><input type="number" id="amount" class="edit" value="${this.amount}" /></td>
